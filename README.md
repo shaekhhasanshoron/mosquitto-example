@@ -14,6 +14,7 @@ docker run --rm -it -e USERNAME=whyxn -e PASSWORD=keepitsecret --name mosquitto 
 ####
 #### Run in KloverCloud:
 - On-board this repository as an application
+- Health Check - None (For now)
 - Minimum 1 GB of persistent volume is required with the following volume mount paths    
 `/mosquitto/data`    
 `/mosquitto/run`    
