@@ -1,4 +1,5 @@
 #### Docker Run:
+You need to mount your certificates to Mosquitto Container in this path (`/mosquitto/certs`)
 
 ```sh
 docker run --rm -it -e USERNAME=whyxn -e PASSWORD=keepitsecret --name mosquitto -p 1883:1883 --read-only -v /vol/mosquitto/run:/mosquitto/run -v /vol/mosquitto/data:/mosquitto/data -v /vol/mosquitto/certs:/mosquitto/certs  klovercloud/mosquitto:2.0
@@ -20,7 +21,7 @@ docker run --rm -it -e USERNAME=whyxn -e PASSWORD=keepitsecret --name mosquitto 
 - Auto SSL by KloverCloud (Let's Encrypt)
 - Provide `/mosquitto/certs` as Auto SSL Certificate Mount Path
 - Create Application
-- Create a secret with the given environment variables
+- Create a secret with the given Environment Variables
 - Deploy
 
 
