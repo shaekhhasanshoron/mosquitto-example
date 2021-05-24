@@ -13,13 +13,14 @@ docker run --rm -it -e USERNAME=whyxn -e PASSWORD=keepitsecret --name mosquitto 
 
 ####
 #### Run in KloverCloud:
-- On-board this repository as an application
-- Health Check - None (For now)
+- Make a fork or clone of this repository to your attached git account with KloverCloud
+- On-board the forked / cloned repository as an Application
+- Set Health Check as `None` (For now)
 - Minimum 1 GB of persistent volume is required with the following volume mount paths    
 `/mosquitto/data`    
 `/mosquitto/run`    
-- Check SSL Pass Through
-- Auto SSL by KloverCloud (Let's Encrypt)
+- Check `SSL Pass Through` to True
+- Check `Auto SSL by KloverCloud (Let's Encrypt)` to True
 - Provide `/mosquitto/certs` as Auto SSL Certificate Mount Path
 - Create Application
 - Create a secret with the given Environment Variables
