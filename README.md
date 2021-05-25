@@ -19,9 +19,10 @@ docker run --rm -it -e USERNAME=whyxn -e PASSWORD=keepitsecret --name mosquitto 
 - Minimum 1 GB of persistent volume is required with the following volume mount paths    
 `/mosquitto/data`    
 `/mosquitto/run`    
+- Setup your Custom External Access URL (Must Required)
 - Check `SSL Pass Through` to True
-- Check `Auto SSL by KloverCloud (Let's Encrypt)` to True
-- Provide `/mosquitto/certs` as Auto SSL Certificate Mount Path
+- Check `Auto SSL by KloverCloud (Let's Encrypt)` to True & provide `/mosquitto/certs` as Auto SSL Certificate Mount Path    
+Or you have to provide your own SSL Certificate & SSL Configurations in `config/mosquitto.conf`
 - Create Application
 - Create a secret with the given Environment Variables
 - Deploy
