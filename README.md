@@ -34,6 +34,15 @@ Or you have to provide your own SSL Certificate & SSL Configurations in `config/
 
 
 #### Test Connection:
+
+**With Self Signed Certificate**
+```sh
+mqtt test -h <YOUR_MOSQUITTO_EXTERNAL_ENDPOINT> -p 443 --secure -u <YOUR_MQTT_USERNAME> -pw <YOUR_MQTT_PASSWORD> --cafile=<PATH_TO_CA_FILE> --cert=<PATH_TO_SERVER_CERT_FILE> --key=<PATH_TO_SERVER_KEY_FILE>
+```
+
+###
+
+**With Trusted Certificate**
 ```sh
 mqtt test -h <YOUR_MOSQUITTO_EXTERNAL_ENDPOINT> -p 443 --secure -u <YOUR_MQTT_USERNAME> -pw <YOUR_MQTT_PASSWORD>
 ```
