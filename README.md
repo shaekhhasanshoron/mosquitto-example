@@ -1,6 +1,4 @@
 #### Docker Run:
-You need to mount your certificates to Mosquitto Container in this path (`/mosquitto/certs`)
-
 ```sh
 docker run --rm -it --name mosquitto -e USERNAME=klovercloud -e PASSWORD=keepitsecret -e GENERATE_SELF_SIGNED_CERTS=1 -e CERTS_DIR=/mosquitto/certs  -e SSL_SUBJECT=mosquitto.example.com -p 1883:1883 --read-only -v /vol/mosquitto/run:/mosquitto/run -v /vol/mosquitto/data:/mosquitto/data -v /vol/mosquitto/certs:/mosquitto/certs  klovercloud/mosquitto:2.0
 ```
