@@ -24,7 +24,7 @@ docker run --rm -it -e USERNAME=whyxn -e PASSWORD=keepitsecret --name mosquitto 
 - Check `Auto SSL by KloverCloud (Let's Encrypt)` to True & provide `/mosquitto/certs` as Auto SSL Certificate Mount Path    
 Or you have to provide your own SSL Certificate & SSL Configurations in `config/mosquitto.conf`
 - Create Application
-- Create a secret with the given Environment Variables
+- Create a Secret with the given Environment Variables
 - Deploy
 
 
