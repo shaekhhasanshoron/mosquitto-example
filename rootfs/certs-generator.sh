@@ -52,18 +52,6 @@ else
     echo "subjectAltName=DNS:${SSL_SUBJECT}" > ${CERTS_DIR}/server.extfile.cnf
     openssl x509 -req -extfile ${CERTS_DIR}/server.extfile.cnf -days $EXPIRE_DAYS -passin pass:$PASS -in ${CERTS_DIR}/${SERVER_CSR} -CA ${CERTS_DIR}/${CA_CERT} -CAkey ${CERTS_DIR}/${CA_KEY} -out ${CERTS_DIR}/${SERVER_CERT}
 
-    # create a client key and certificate signing request (CSR)
-    # openssl genrsa -des3 -out key.pem -passout pass:$PASS 2048
-    # openssl req -subj '/CN=client' -new -key key.pem -out client.csr -passin pass:$PASS
-
-    # create an extensions config file and sign
-    # echo extendedKeyUsage = clientAuth > extfile.cnf
-    # openssl x509 -req -days $EXPIRE_DAYS -passin pass:$PASS -in client.csr -CA ca.pem -CAkey ca-key.pem -out cert.pem -extfile extfile.cnf
-
-    # remove the passphrase from the client and server key
-    # openssl rsa -in server-key.pem -out server-key.pem -passin pass:$PASS
-    # openssl rsa -in key.pem -out key.pem -passin pass:$PASS
-
     # remove generated files that are no longer required
     rm -f ${CERTS_DIR}/${CA_KEY} ${CERTS_DIR}/ca.srl ${CERTS_DIR}/client.csr ${CERTS_DIR}/extfile.cnf ${CERTS_DIR}/${SERVER_CSR}
 
