@@ -19,6 +19,7 @@ docker run --rm -it --name mosquitto -e USERNAME=klovercloud -e PASSWORD=keepits
 #### Run in KloverCloud:
 - Make a fork or clone of this repository to your attached git account with KloverCloud
 - On-board the forked / cloned repository as an Application
+- Set Application Port to `1883`
 - Set Health Check as `None` (For now)
 - Minimum 1 GB of persistent volume is required with the following volume mount paths    
 `/mosquitto/data`    
